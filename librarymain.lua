@@ -1,3 +1,6 @@
+-- MADE BY $in#3840 --
+-- COPYRIGHT (C) SIN INTERACTIONS --
+
 -- Services
 local players = game:GetService("Players")
 local tweenservice = game:GetService("TweenService")
