@@ -1,4 +1,4 @@
-(Creating  the Library)
+**(Creating  the Library)**
 
 
 local main = Library:Init {
@@ -6,7 +6,7 @@ local main = Library:Init {
 }
 
 
-(Creating the Tab)
+**(Creating the Tab)**
 
 
 local tab = main:Tab({
@@ -15,7 +15,7 @@ local tab = main:Tab({
  })
  
  
- (Creating a warning)
+ **(Creating a warning)**
  
  
  local warning = tab:Warning({
@@ -23,7 +23,7 @@ local tab = main:Tab({
 })
 
 
-(Creating a Button)
+**(Creating a Button)**
 
 
 local button = tab:Button({
@@ -32,7 +32,7 @@ local button = tab:Button({
 )}
 
 
-(Creating a Slider)
+**(Creating a Slider)**
 
 
 local Slider = tab:Slider({
@@ -44,7 +44,7 @@ local Slider = tab:Slider({
 })
 
 
-(Creating a Toggle)
+**(Creating a Toggle)**
 
 
 local tog = tab:Toggle({
@@ -54,7 +54,7 @@ local tog = tab:Toggle({
 })
 
 
-(Creating the Dropdown)
+**(Creating the Dropdown)**
 
 
 local d = tab:Dropdown({
@@ -64,13 +64,13 @@ local d = tab:Dropdown({
       end,
 })
 
-(Dropdown methods)
+**(Dropdown methods)**
 
 
 The dropdown function got the method 'Add'
 
 
-(Warning Methods)
+**(Warning Methods)**
 
 
 You can 'SetText' of the warning
