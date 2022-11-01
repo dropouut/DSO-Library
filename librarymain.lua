@@ -44,7 +44,7 @@ function Library:Init(options)
 	-- Main Frame
 	do
 		GUI["1"] = Instance.new("ScreenGui", runService:IsStudio() and players.LocalPlayer:WaitForChild("PlayerGui") or CoreGui);
-		GUI["1"]["Name"] = [[MyLibrary]];
+		GUI["1"]["Name"] = [[defconv1]];
 		GUI["1"]["IgnoreGuiInset"] = true
 
 		GUI["2"] = Instance.new("Frame", GUI["1"]);
