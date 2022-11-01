@@ -109,7 +109,7 @@ function Library:Init(options)
 		GUI["6"]["Size"] = UDim2.new(0.5, 0, 1, 0);
 		GUI["6"]["Text"] = options["name"];
 		GUI["6"]["Name"] = options["name"];
-		GUI["6"]["Font"] = Enum.Font.Gotham;
+		GUI["6"]["Font"] = Enum.Font.GothamBold;
 		GUI["6"]["BackgroundTransparency"] = 1;
 
 		-- StarterGui.MyLibrary.Main.TopBar.Title.UIPadding
@@ -234,7 +234,7 @@ function Library:Init(options)
 			Tab["14"]["Size"] = UDim2.new(1, 0, 0, 24);
 			Tab["14"]["Text"] = options.name;
 			Tab["14"]["Name"] = [[Inactive]];
-			Tab["14"]["Font"] = Enum.Font.Ubuntu;
+			Tab["14"]["Font"] = Enum.Font.Arial;
 			Tab["14"]["BackgroundTransparency"] = 1;
 
 			-- StarterGui.MyLibrary.Main.Navigation.ButtonHolder.Inactive.UIPadding
@@ -380,7 +380,7 @@ function Library:Init(options)
 				Button["1e"]["Size"] = UDim2.new(1, -20, 1, 0);
 				Button["1e"]["Text"] = options.name;
 				Button["1e"]["Name"] = [[Title]];
-				Button["1e"]["Font"] = Enum.Font.Ubuntu;
+				Button["1e"]["Font"] = Enum.Font.Arial;
 				Button["1e"]["BackgroundTransparency"] = 1;
 				
 				-- StarterGui.MyLibrary.Main.ContentContainer.HomeTab.Button.UIPadding
@@ -489,7 +489,7 @@ function Library:Init(options)
 				Warning["26"]["Size"] = UDim2.new(1, 0, 1, 0);
 				Warning["26"]["Text"] = options.message;
 				Warning["26"]["Name"] = [[Title]];
-				Warning["26"]["Font"] = Enum.Font.Ubuntu;
+				Warning["26"]["Font"] = Enum.Font.Arial;
 				Warning["26"]["BackgroundTransparency"] = 1;
 				Warning["26"]["TextWrapped"] = true;
 				Warning["26"]["TextYAlignment"] = Enum.TextYAlignment.Top
@@ -571,7 +571,7 @@ function Library:Init(options)
 				Toggle["54"]["Size"] = UDim2.new(1, -26, 1, 0);
 				Toggle["54"]["Text"] = options.title;
 				Toggle["54"]["Name"] = [[Title]];
-				Toggle["54"]["Font"] = Enum.Font.Ubuntu;
+				Toggle["54"]["Font"] = Enum.Font.Arial;
 				Toggle["54"]["BackgroundTransparency"] = 1;
 
 				-- StarterGui.MyLibrary.Main.ContentContainer.HomeTab.ToggleInactive.UIPadding
@@ -634,7 +634,7 @@ function Library:Init(options)
 				Toggle["5d"]["Size"] = UDim2.new(1, -26, 1, 0);
 				Toggle["5d"]["Text"] = [[Toggle]];
 				Toggle["5d"]["Name"] = [[Title]];
-				Toggle["5d"]["Font"] = Enum.Font.Ubuntu;
+				Toggle["5d"]["Font"] = Enum.Font.Arial;
 				Toggle["5d"]["BackgroundTransparency"] = 1;
 
 				-- StarterGui.MyLibrary.Main.ContentContainer.HomeTab.ToggleActive.UIPadding
@@ -784,7 +784,7 @@ function Library:Init(options)
 				Slider["38"]["Size"] = UDim2.new(1, -24, 1, -10);
 				Slider["38"]["Text"] = options.Title;
 				Slider["38"]["Name"] = [[Title]];
-				Slider["38"]["Font"] = Enum.Font.Ubuntu;
+				Slider["38"]["Font"] = Enum.Font.Arial;
 				Slider["38"]["BackgroundTransparency"] = 1;
 
 				-- StarterGui.MyLibrary.Main.ContentContainer.HomeTab.Slider.UIPadding
@@ -805,7 +805,7 @@ function Library:Init(options)
 				Slider["3a"]["Size"] = UDim2.new(0, 24, 1, -10);
 				Slider["3a"]["Text"] = tostring(options.default);
 				Slider["3a"]["Name"] = [[Value]];
-				Slider["3a"]["Font"] = Enum.Font.Ubuntu;
+				Slider["3a"]["Font"] = Enum.Font.Arial;
 				Slider["3a"]["BackgroundTransparency"] = 1;
 				Slider["3a"]["Position"] = UDim2.new(1, 0, 0, 0);
 
@@ -968,7 +968,7 @@ function Library:Init(options)
 				Dropdown["48"]["Size"] = UDim2.new(1, -20, 0, 20);
 				Dropdown["48"]["Text"] = options.title;
 				Dropdown["48"]["Name"] = [[Title]];
-				Dropdown["48"]["Font"] = Enum.Font.Ubuntu;
+				Dropdown["48"]["Font"] = Enum.Font.Arial;
 				Dropdown["48"]["BackgroundTransparency"] = 1;
 
 				-- StarterGui.MyLibrary.Main.ContentContainer.HomeTab.Dropdown.UIPadding
@@ -1027,7 +1027,7 @@ function Library:Init(options)
 					Dropdown.Items[id].instance["4d"]["Size"] = UDim2.new(1, 0, 0, 16);
 					Dropdown.Items[id].instance["4d"]["Text"] = id;
 					Dropdown.Items[id].instance["4d"]["Name"] = [[Inactive Option]];
-					Dropdown.Items[id].instance["4d"]["Font"] = Enum.Font.Ubuntu;
+					Dropdown.Items[id].instance["4d"]["Font"] = Enum.Font.Arial;
 
 					-- StarterGui.MyLibrary.Main.ContentContainer.HomeTab.Dropdown.OptionHolder.Inactive Option.UIStroke
 					Dropdown.Items[id].instance["4e"] = Instance.new("UIStroke", Dropdown.Items[id].instance["4d"]);
@@ -1171,20 +1171,10 @@ function Library:Init(options)
 					end
 				end)
 			end
-
-
 			return Dropdown
-		end
-		
-		
-		
-		
-		
-		
+		end	
 		return Tab
 	end
-	
 	return GUI
 end
-
 return Library
