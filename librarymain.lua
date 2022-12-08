@@ -32,6 +32,39 @@ function Library:Tween(object, goal, callback)
 	tween:Play()
 end
 
+function Library:checkVersion(Version, user, repo, branch)
+	local get = function(path)
+		local link = ("https://raw.githubusercontent.com/%s/%s/%s/%s"):format(user, repo, branch, path)
+		local data = syn.request({
+			Url = link,
+			Method = "GET"
+		}).Body
+		
+		if string.sub(data, 1, 1) == "{" then
+			return http:JSONDecode(data)
+		else
+			return loadstring(data)()
+		end
+	end
+	
+	local latestVer = get("info.json")['version']
+	local Ver = Instance.new("StringValue", game.Players.LocalPlayer)
+	if Version == "" then
+		print("Please enter a version.")
+	else
+		Ver.Value = Version
+	end
+	
+	
+	-- Checking the Version
+	
+	if latestVer == Ver.Value then
+		print("Script Executed.")
+	elseif latestVer ~= Ver.Value then
+		players.LocalPlayer:Kick("Outdated Version")
+	end
+end
+
 function Library:Init(options)
 	options = Library:Validate({
 		name = "No Name Library"
