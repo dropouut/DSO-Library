@@ -1,76 +1,104 @@
-**(Creating  the Library)**
+
+# DSO-Library
+
+DSO-Library is a free and open sourced Roblox UI library.
 
 
+## Loadstring
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dropouut/DSO-Library/main/librarymain.lua")()
+```
+
+## Features
+- Buttons
+- Sliders
+- Dropdowns
+- Toggles
+
+... more to be added.
+
+Created by $in Interactions#5103
+
+## Documentation
+
+### Get the library
+```lua
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/dropouut/DSO-Library/main/librarymain.lua")()
+```
+
+### Create the GUI
+```lua
 local main = Library:Init {
-    name = "YOUR LIBRARY NAME HERE"
+    name = "DSO V1"
 }
 
-
-**(Creating the Tab)**
-
-
-local tab = main:Tab({
-      name = "Tab Name here",
-      Icon = "rbxassetid://"
- })
- 
- 
- **(Creating a warning)**
- 
- 
- local warning = tab:Warning({
-        message = "Your text here"
+```
+### Create a Tab
+```lua
+local Tab = main:Tab({
+    name = "name",
+    Icon = "rbxassetid://"
 })
+```
 
-
-**(Creating a Button)**
-
-
-local button = tab:Button({
-        name = "Your Text here",
-        callback = function() warning:SetText("I am a warning") end
-)}
-
-
-**(Creating a Slider)**
-
-
-local Slider = tab:Slider({
-      Title = "Your Text here",
-      min = 0,
-      max = 100,
-      default = 50,
-      callback = function(v) print(V) end
+### Create a Button
+```lua
+local Button = tab:Button({
+    name = "Button",
+    callback = function()
+        print("Button was clicked by ".. game.Players.LocalPlayer.Name)
+    end,
 })
+```
 
-
-**(Creating a Toggle)**
-
-
-local tog = tab:Toggle({
-  callback = function(v)
+### Create a Toggle
+```lua
+local Toggle = tab:Toggle({
+    callback = function(v)
         print(v)
-  end,
+    end,
+    title = "Print"
+})
+```
+
+### Create a Dropdown
+
+```lua
+local Dropdown = tab:Dropdown({
+	title = "Test",
+	callback = function(v)
+		print(v.. " was clicked")
+	end,
 })
 
+Dropdown:Add("Name", 1)
+Dropdown:Add("Name2", 2)
+```
 
-**(Creating the Dropdown)**
+### Create a Slider
 
-
-local d = tab:Dropdown({
-      title = "Your Title here",
-      calback = function(v)
-            print(v .. " was clicked")
-      end,
+```lua
+local Slider = tab:Slider({
+	Title = "Walkspeed",
+	callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+	end,
 })
+```
 
-**(Dropdown methods)**
-
-
-The dropdown function got the method 'Add'
-
-
-**(Warning Methods)**
-
-
-You can 'SetText' of the warning
+### Checking Versions
+-- Instructions:
+  - Create a new repo
+  - make a config.json file
+  - and put in:
+           ```json
+            {
+                "creator": "YourName",
+                "client": "sin",
+                "version": YOUR VERSION HERE
+             }
+             ```
+```lua
+    Library:checkVersion(1, "dropouut", "database", "main") -- 1 is your version. ALWAYS UPDATE THIS IF YOU ENABLE, 2nd is your github name, 3rd is your repo name, 4th is your branch name
+     
+```
